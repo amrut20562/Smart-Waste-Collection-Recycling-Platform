@@ -1,0 +1,85 @@
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+backend/.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+smart_waste.db
+
+# Machine Learning Models & Weights
+*.pt
+*.pth
+*.onnx
+*.weights
+*.bin
+*.safetensors
+backend/*.pt
+backend/models/*.pt
+!backend/models/.gitkeep
+
+# Uploads & Generated Media
+backend/uploads/*
+!backend/uploads/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+*.pem
+*.key
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+frontend/dist/
+frontend/.vite/
+.vite/
+
+# Tool outputs & caches
+graphify-out/
+.planning/
+.agents/
+scratch/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

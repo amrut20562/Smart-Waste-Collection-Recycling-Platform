@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+pydantic-settings
+python-multipart
+python-dotenv
+ultralytics
+torch
+torchvision
+transformers
+pillow
+numpy
+scikit-learn
+ortools
+pytest
+httpx

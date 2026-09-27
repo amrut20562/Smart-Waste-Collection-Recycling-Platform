@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-[#0a0a0f] text-[#e8e8ec] font-sans;
+  }
+  ::selection {
+    @apply bg-eco-600 text-white;
+  }
+}
+
+/* Subtle grain overlay - dark */
+@layer base {
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2.5 bg-eco-500 text-white rounded-xl font-medium transition-all duration-200 hover:bg-eco-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-eco-500/25 active:translate-y-0 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-eco-400 focus:ring-offset-2 focus:ring-offset-[#0a0a0f];
+  }
+
+  .btn-secondary {
+    @apply px-5 py-2.5 bg-white/10 text-[#e8e8ec] border border-white/10 rounded-xl font-medium transition-all duration-200 hover:bg-white/15 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white/20;
+  }
+
+  .card {
+    @apply bg-[#12121a] rounded-2xl shadow-[0_4px_30px_rgb(0,0,0,0.4)] p-6 transition-shadow duration-300 hover:shadow-[0_8px_40px_rgb(0,0,0,0.6)] border border-white/[0.06];
+  }
+
+  .input-field {
+    @apply w-full px-3.5 py-2.5 bg-[#161625] border border-white/10 rounded-xl text-sm text-[#e8e8ec] outline-none transition-colors duration-200 focus:ring-2 focus:ring-eco-500/50 focus:border-eco-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide;
+  }
+
+  h1.display-heading {
+    @apply text-5xl md:text-7xl font-bold tracking-[-0.03em] leading-[0.92] text-[#f0f0f5];
+  }
+}
